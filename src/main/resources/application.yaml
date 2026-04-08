@@ -6,5 +6,21 @@ spring:
   application:
     name: insu
 
+  datasource:
+    url: jdbc:oracle:thin:@localhost:15210/XEPDB1
+    username: ${DB_USERNAME:insurance}        #환경변수 우선, 없으면 기본값 사용
+    password: ${DB_PASSWORD:1234}
+    driver-class-name: oracle.jdbc.OracleDriver
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true        #sql 콘솔 출력
+    properties:
+      hibernate:
+        format_sql: true  #sql 정렬
+        dialect: org.hibernate.dialect.OracleDialect
+
+
 server:
   port:8080
