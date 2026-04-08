@@ -1,0 +1,10 @@
+#스페이스 2칸으로 부모-자식 관계 형성, tab키 정대 사용 금지
+#key: value 구조
+#리스트는 -(대시)로 표현
+
+spring:
+  application:
+    name: insu
+
+server:
+  port:8080
