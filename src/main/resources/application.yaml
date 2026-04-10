@@ -23,4 +23,4 @@ spring:
 
 
 server:
-  port:8080
+  port: ${DB_PORT:8080}
