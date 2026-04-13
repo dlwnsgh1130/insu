@@ -23,6 +23,12 @@ public class MemberService {
         return memberRepository.findAll();
     }
 
+    //개별 조회
+    public Member findById(Long id){
+        return memberRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException(id));
+    }
+
 
     // 등록
     @Transactional

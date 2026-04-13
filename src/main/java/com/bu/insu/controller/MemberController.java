@@ -33,6 +33,10 @@ public class MemberController {
 
 
     // 회원 개별 조회
+    @GetMapping("/{id}")
+    public MemberResponse findById(@PathVariable Long id){
+        return MemberResponse.from(memberService.findById(id));
+    }
 
 
     // 회원 등록 POST
